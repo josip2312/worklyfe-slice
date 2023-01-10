@@ -1,3 +1,17 @@
 {
-  "extends": "stylelint-config-standard"
+  "plugins": ["stylelint-scss", "stylelint-order"],
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-idiomatic-order",
+    "stylelint-config-prettier"
+  ],
+  "rules": {
+    "custom-property-empty-line-before": "never",
+    "selector-class-pattern": [
+      "^[a-z0-9_-]+$",
+      {
+        "resolveNestedSelectors": true
+      }
+    ]
+  }
 }
