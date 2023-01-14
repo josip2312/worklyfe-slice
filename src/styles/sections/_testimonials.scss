@@ -1,0 +1,176 @@
+@use "../abstracts/" as *;
+
+.testimonials {
+  background: linear-gradient(180deg, #fff 0%, #d7ffda 100%);
+
+  @include mq(small) {
+    padding-bottom: 6.4rem;
+  }
+}
+
+.testimonials-heading {
+  position: relative;
+  margin-bottom: 2rem;
+  isolation: isolate;
+
+  &__title {
+    margin-bottom: 0.8rem;
+    font-size: 2.6rem;
+    font-weight: 600;
+    line-height: 1.15;
+  }
+
+  &__paragraph {
+    font-size: var(--fs-200);
+  }
+
+  @include mq(small) {
+    max-width: 42rem;
+    margin-bottom: -3rem;
+
+    .icon {
+      position: absolute;
+      z-index: -1;
+      top: -5rem;
+      left: -6.5rem;
+      display: flex;
+      width: 15rem;
+    }
+
+    &__title {
+      font-size: 4.8rem;
+    }
+
+    &__paragraph {
+      font-size: var(--fs-500);
+    }
+  }
+}
+
+.testimonials-cards {
+  position: relative;
+  min-height: 10rem;
+
+  .error-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @include mq(small) {
+    display: grid !important;
+    gap: 3.6rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+
+    .testimonials-card:first-child {
+      grid-column: 1 / 2;
+      grid-row: 3 / 7;
+    }
+
+    .testimonials-card:nth-child(2) {
+      grid-column: 2 / 3;
+      grid-row: 1 / 5;
+    }
+
+    .testimonials-card:last-child {
+      grid-column: 2 / 3;
+      grid-row: 5 / 9;
+    }
+  }
+}
+
+.testimonials-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1.6rem 3.2rem 3.2rem;
+  border-radius: 7px;
+  background-color: var(--bg-1);
+  box-shadow: var(--elevation-1);
+  cursor: pointer;
+
+  @include mq(small) {
+    padding-top: 3.2rem;
+  }
+
+  &__title {
+    margin-bottom: 1.6rem;
+    color: var(--text-primary);
+    font-size: var(--fs-500);
+
+    @include mq(small) {
+      font-size: 2.2rem;
+    }
+  }
+
+  &__quote {
+    position: relative;
+    margin-bottom: 1.2rem;
+
+    .icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1.6rem;
+    }
+
+    p {
+      margin-top: 0.5rem;
+      margin-left: 2rem;
+      font-size: var(--fs-200);
+      line-height: 1.8;
+
+      @include mq(small) {
+        font-size: var(--fs-500);
+      }
+    }
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+
+    img {
+      width: 4.2rem;
+      height: 4.2rem;
+      border-radius: 50%;
+      margin-right: 0.5rem;
+      object-fit: cover;
+    }
+  }
+
+  &__user-info {
+    line-height: 1.2;
+
+    &-name {
+      margin-bottom: 0.4rem;
+      font-size: var(--fs-300);
+      font-weight: 600;
+    }
+
+    &-role {
+      color: var(--text-3);
+      font-size: var(--fs-200);
+    }
+
+    @include mq(small) {
+      &-name {
+        font-size: var(--fs-500);
+      }
+
+      &-role {
+        font-size: var(--fs-300);
+      }
+    }
+  }
+
+  &__btn {
+    min-width: 10rem;
+    align-self: flex-end;
+    padding: 0.5rem;
+    margin-top: 1.6rem;
+  }
+}
