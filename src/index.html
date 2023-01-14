@@ -3,17 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>webpack starterkit</title>
-    <meta
-      name="description"
-      content="A light foundation for your next frontend project based on webpack."
-    />
+    <title>Worklyfe</title>
+    <meta name="description" content="Worklyfe" />
   </head>
   <body>
-    <img src="images/webpack.png" alt="Webpack logo" />
-    <h1>webpack starter</h1>
-    <p>
-      ✨ A lightweight foundation for your next webpack based frontend project .
-    </p>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="navigation-wrapper">
+        <nav class="navigation" aria-label="Primary">
+          <a href="#" class="logo navigation__logo">
+            Work
+            <span> lyfe </span>
+          </a>
+
+          <ul data-id="nav-list" role="list" class="navigation__list">
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Office</a>
+            </li>
+            <li>
+              <a href="#">Packages</a>
+            </li>
+            <li>
+              <a href="#">Benefits</a>
+            </li>
+            <li>
+              <a href="#">Prices </a>
+            </li>
+          </ul>
+        </nav>
+        <button class="navigation__cta | display-sm-and-up btn bg-100">
+          Login
+        </button>
+        <button
+          data-id="nav-list-toggler"
+          class="navigation__toggle | display-sm-only"
+        >
+          <img class="icon" src="/src/assets/icons/menu.svg" alt="Menu icon" />
+        </button>
+      </div>
+    </header>
   </body>
 </html>
