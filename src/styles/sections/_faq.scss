@@ -1,0 +1,60 @@
+@use "../abstracts" as *;
+
+.faq {
+  --content-max-width: 44rem;
+}
+
+.faq-images {
+  position: relative;
+  display: grid;
+  max-width: var(--content-max-width);
+  height: 32rem;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .faq-img--left {
+    grid-column: 1 / 6;
+    grid-row: 1 / 11;
+  }
+
+  .faq-img--right {
+    grid-column: 5 / -1;
+    grid-row: 5 / -1;
+  }
+
+  @include mq(small) {
+    height: 48rem;
+
+    .faq-img--left {
+      grid-column: 1 / 7;
+      grid-row: 1 / 10;
+    }
+
+    .faq-img--right {
+      grid-column: 5 / -1;
+      grid-row: 4 / 12;
+    }
+  }
+}
+
+.faq-content {
+  max-width: var(--content-max-width);
+
+  &__title {
+    color: var(--text-primary);
+    font-size: 2.8rem;
+    line-height: 1.29;
+  }
+
+  &__paragraph {
+    max-width: 100%;
+    color: var(--text-secondary-1);
+    line-height: 2;
+  }
+}
