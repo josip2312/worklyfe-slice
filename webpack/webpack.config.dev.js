@@ -33,6 +33,11 @@ module.exports = merge(common, {
       files: Path.join('src', '**/*.s?(a|c)ss'),
     }),
   ],
+  resolve: {
+    alias: {
+      '@': Path.resolve(__dirname, '../src'),
+    },
+  },
   module: {
     rules: [
       {
