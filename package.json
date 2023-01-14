@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "lint": "npm run lint:styles; npm run lint:scripts",
-    "lint:styles": "stylelint src",
+    "lint:styles": "stylelint src/styles",
     "lint:scripts": "eslint src",
     "build": "cross-env NODE_ENV=production webpack --config webpack/webpack.config.prod.js",
     "start": "webpack serve --config webpack/webpack.config.dev.js"
