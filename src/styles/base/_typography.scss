@@ -1,7 +1,9 @@
 @use "../abstracts" as *;
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap";
 
 body {
-  font-family: Ubuntu, system-ui, sans-serif;
+  color: var(--text-1);
+  font-family: Poppins, system-ui, sans-serif;
   font-size: var(--fs-400);
   font-weight: 400;
 }
@@ -10,9 +12,13 @@ h1,
 h2,
 h3,
 h4 {
-  line-height: 1;
+  line-height: 1.1;
 }
 
-.title {
-  margin-bottom: 3.5rem;
+p {
+  max-width: 35ch;
+}
+
+p.wide {
+  max-width: 55ch;
 }
