@@ -1,3 +1,60 @@
+@use "../abstracts" as *;
+
+button {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
 .btn {
+  --border-offset: 2px;
+
+  position: relative;
+  z-index: 1;
   display: flex;
+  width: 100%;
+  min-width: 16.6rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em 1em;
+  border: var(--border-offset) solid var(--bg-primary);
+  border-radius: 20rem;
+  color: var(--text-primary);
+  cursor: pointer;
+  font-size: var(--fs-400);
+  isolation: isolate;
+
+  &::after {
+    position: absolute;
+    z-index: -1;
+    border-radius: inherit;
+    background-color: var(--overlay-hover);
+    content: "";
+    inset: calc(var(--border-offset) * -1);
+    opacity: 0;
+    transition: opacity 125ms var(--ease-out-cubic);
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+
+  &--primary {
+    background-color: var(--bg-primary);
+    color: var(--text-1);
+  }
+
+  &--large {
+    padding: 0.875em 1.5em;
+  }
+
+  @include mq(small) {
+    width: auto;
+
+    &--large {
+      padding: 1.125em 2em;
+    }
+  }
 }
