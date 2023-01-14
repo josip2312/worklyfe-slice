@@ -1,0 +1,38 @@
+@use "../abstracts" as *;
+
+.cta {
+  padding-top: 10rem;
+  padding-bottom: 12rem;
+  background-image: var(--bg-gradient-overlay), url("../assets/images/cta.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  --flow-spacer: 1rem;
+
+  @include mq(small) {
+    --flow-spacer: 1.8rem;
+
+    padding: 22rem 0;
+  }
+
+  &__title {
+    font-size: 3.2rem;
+    text-align: center;
+
+    @include mq(small) {
+      font-size: 6rem;
+    }
+  }
+
+  &__subtitle {
+    margin: 0 auto;
+    text-align: center;
+    text-shadow: 0 0 20px rgb(0 0 0 / 50%);
+  }
+
+  &__cta {
+    max-width: 30rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
